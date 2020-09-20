@@ -1,11 +1,11 @@
 
-#######################################################################
-#    These are the R codes of the paper:                                                                                #
-#        Detecting the demand changes of bike sharing: A Bayesian hierarchical approach       #
-#    If you wanna use these codes for research purposes, please cite this paper as well           #
-#    Require R packages: MCMCpack, MASS, geoR, mnormt, apcluster                                   #
-#    R version: 3.4.4                                                                                                              #
-#######################################################################
+#############################################################################################
+    These are the R codes of the paper:                                                                                
+        Detecting the demand changes of bike sharing: A Bayesian hierarchical approach       
+    If you wanna use these codes for research purposes, please cite this paper as well           
+    Require R packages: MCMCpack, MASS, geoR, mnormt, apcluster                                   
+    R version: 3.4.4                                                                                                              
+#############################################################################################
 
 #----------Description of codes----------#
 1. demand_change_detection_weekly.r  :  Demand change detection using the weekly-integrated bike sharing demand data
