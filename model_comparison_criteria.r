@@ -345,7 +345,13 @@ regiondata=read.csv("region_info.csv")
 num_region=length(regiondata[,1])
 data=read.csv("region_generation_final_daily.csv")
 data=data[,-1]
-weatherstr=c("aqi","prec","fog","rain","snow","press","rh","temp","wind","day")
+#Piecewise linear function of temperature
+peaktemp=68.7803
+data$temp1=data$temp
+data$temp2=0
+indextemp=which(data$temp>=peaktemp)
+data[indextemp,"temp2"]=data[indextemp,"temp"]-peaktemp
+weatherstr=c("aqi","prec","fog","rain","snow","press","rh","temp1","temp2","wind","day")
 data=data[which(data$isweekend==0),]#Remove weekend and holidays
 data=data[which(data$isholiday==0),]
 num_period=length(data[,1])
